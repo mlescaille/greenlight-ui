@@ -1,0 +1,17 @@
+@import '~@angular/material/theming';
+// Plus imports for other components in your app.
+
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+@include mat-core();
+
+$greenlight-primary: mat-palette($mat-teal);
+$greenlight-accent:  mat-palette($mat-light-green, 500, 900, A700);
+$greenlight-warn:    mat-palette($mat-orange, 900);
+
+$greenlight-theme: mat-light-theme($greenlight-primary, $greenlight-accent, $greenlight-warn);
+
+@include angular-material-theme($greenlight-theme);
+
+
